@@ -9,6 +9,8 @@ import { setError } from "../../redux/actions/authActions";
 import { RootState } from "../../redux";
 import firebase from "../../config/firebase";
 import errIcon from "../../assets/warning.svg";
+import { SET_AUTH } from "../../redux/types";
+import { Spin } from "antd";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -28,11 +30,16 @@ const Login = () => {
     setLoading(true);
     try {
       await firebase.auth().signInWithEmailAndPassword(email, password);
-      navigate("/home");
+      dispatch({
+        type: SET_AUTH,
+      });
+      setLoading(false);
+      navigate("/");
     } catch (err) {
       console.log(err);
       setErr(true);
       dispatch(setError((err as Error).message));
+      setLoading(false);
     }
   };
 
@@ -72,7 +79,10 @@ const Login = () => {
             )
           )}
         </div>
-        <Button text="Đăng nhập" onClick={submitHandler} />
+        <Button
+          text={loading ? <Spin /> : "Đăng nhập"}
+          onClick={submitHandler}
+        />
         {err ? <div className="forgetPassword">Quên mật khẩu</div> : <></>}
       </section>
       <section className="imageLoginPage">

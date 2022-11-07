@@ -1,0 +1,79 @@
+.notification {
+  position: absolute;
+  right: 100px;
+  top: 28px;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ant-dropdown {
+  box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 400px;
+  background: #fff;
+}
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 43px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffc89b;
+}
+.ant-dropdown-menu {
+  padding-top: 0 !important;
+}
+.ant-dropdown-menu li:first-child {
+  padding-top: 5px !important;
+  background-color: #ffac6a;
+  cursor: default;
+  color: #fff2e7;
+  display: flex;
+  align-items: center;
+  height: 30px !important;
+}
+.ant-dropdown-menu li {
+  height: 80px;
+}
+.ant-dropdown-menu h4 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #535261;
+}
+.ant-dropdown-menu h4:first-child {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #bf5805;
+}
+.notification_bell {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  color: #ffac6a !important;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  background: #fff2e7;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.notification_bell:hover {
+  background: #ffac6a;
+  color: #fff2e7 !important;
+}
+.notification_user {
+  display: flex;
+  align-items: center;
+}
+.notification_user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

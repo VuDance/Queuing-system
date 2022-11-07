@@ -5,6 +5,7 @@ import {
   SET_LOADING,
   SIGN_OUT,
   SET_ERROR,
+  SET_AUTH,
 } from "../types";
 
 const initialState: AuthState = {
@@ -22,6 +23,10 @@ export default (state = initialState, action: AuthAction) => {
       return {
         ...state,
         user: action.payload,
+        authenticated: true,
+      };
+    case SET_AUTH:
+      return {
         authenticated: true,
       };
     case SET_LOADING:

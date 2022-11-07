@@ -7,12 +7,23 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "./redux";
 import firebase from "./config/firebase";
 import { getUserById } from "./redux/actions/authActions";
+import Layout from "./component/Layout/Layout";
+import Dashboard from "./page/Dashboard/Dashboard";
 
 function App() {
   const dispatch = useDispatch<any>();
+  const { authenticated } = useSelector((state: RootState) => state.auth);
   const { loading } = useSelector((state: RootState) => state.auth);
 
+  const ProtectedRoute = ({ children }: any) => {
+    if (!authenticated) {
+      return <Navigate to="login" />;
+    }
+    return children;
+  };
+
   useEffect(() => {
+    console.log(authenticated);
     const unsubscribe = firebase.auth().onAuthStateChanged(async (user) => {
       if (user) {
         await dispatch(getUserById(user.uid));
@@ -25,8 +36,29 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Login />} />
+        <Route path="/">
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/user"
+            element={
+              <ProtectedRoute>
+                <Layout>
+                  <Home />
+                </Layout>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            index
+            element={
+              <ProtectedRoute>
+                <Layout>
+                  <Dashboard />
+                </Layout>
+              </ProtectedRoute>
+            }
+          />
+        </Route>
       </Routes>
     </div>
   );

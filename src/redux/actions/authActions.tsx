@@ -11,23 +11,6 @@ import {
 import { RootState } from "..";
 import firebase from "../../config/firebase";
 
-export const signin = (
-  data: SignInData,
-  onError: () => void
-): ThunkAction<void, RootState, null, AuthAction> => {
-  return async (dispatch) => {
-    try {
-      await firebase
-        .auth()
-        .signInWithEmailAndPassword(data.email, data.password);
-    } catch (err) {
-      console.log(err);
-      onError();
-      dispatch(setError((err as Error).message));
-    }
-  };
-};
-
 // Set error
 export const setError = (
   msg: string

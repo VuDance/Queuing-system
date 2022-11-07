@@ -1,0 +1,48 @@
+.wrapperSidebar {
+  width: 250px;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.linkLogOut {
+  position: absolute;
+  bottom: 30px;
+}
+.btnLogOut {
+  padding: 12px;
+  gap: 12px;
+  width: 176px;
+  height: 48px;
+  background: #fff2e7;
+  border-radius: 8px;
+  border: none;
+  color: #ff7506;
+}
+.ant-menu-item {
+  color: black;
+}
+.ant-menu-item:hover,
+.ant-menu-submenu:hover {
+  background: #fff2e7;
+  color: #ff7506 !important;
+}
+.ant-menu-item-active {
+  color: #ff7506 !important;
+  background: #fff2e7 !important;
+}
+.ant-menu-submenu-active span {
+  color: #ff7506 !important;
+}
+.ant-menu-submenu-active i {
+  color: #ff7506 !important;
+}
+.ant-menu-item-selected {
+  color: #ff7506 !important;
+  background: #fff2e7 !important;
+}
+.btnLogOut img {
+  margin-right: 10px;
+}

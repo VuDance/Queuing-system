@@ -1,0 +1,80 @@
+.userData {
+  box-shadow: 0px 2px 6px rgba(219, 219, 219, 0.5);
+  border-radius: 12px;
+  width: 1000px;
+  height: 397px;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+}
+.imageUser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 350px;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  margin: 0 24px;
+  position: relative;
+  margin-top: 22px;
+}
+.imageUser img {
+  width: 100%;
+  height: 248px;
+  border-radius: 50%;
+  margin-bottom: 19px;
+}
+.btnUpload {
+  right: 50px;
+  top: 250px;
+  border-radius: 50% !important;
+  position: absolute !important;
+  overflow: hidden !important;
+  color: #ffffff !important;
+  background: #ff7506 !important;
+}
+.inforUser {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 100%;
+}
+.inforUserDesc p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #282739;
+}
+.inforUserDesc input {
+  padding: 12px 16px;
+  gap: 10px;
+  width: 330px;
+  height: 44px;
+  background: #eaeaec;
+  border-radius: 6px;
+  border: none;
+  color: #535261;
+  opacity: 0.5;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.inforUserDesc input:focus {
+  outline: none;
+}
+.uploadBtn {
+  display: flex;
+  align-items: center;
+  padding: 10px 24px;
+  gap: 8px;
+  width: 80px;
+  height: 40px;
+  background: #ff9138;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0px 0px 6px #e7e9f2;
+  border-radius: 8px;
+  cursor: pointer;
+}

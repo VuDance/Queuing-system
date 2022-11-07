@@ -2,6 +2,7 @@ export const SET_USER = "SET_USER";
 export const SIGN_OUT = "SIGN_OUT";
 export const SET_LOADING = "SET_LOADING";
 export const SET_ERROR = "SET_ERROR";
+export const SET_AUTH = "SET_AUTH";
 
 export interface User {
   firstName: string;
@@ -9,7 +10,6 @@ export interface User {
   id: string;
   createdAt: any;
 }
-
 export interface AuthState {
   user: User | null;
   authenticated: boolean;
@@ -44,7 +44,9 @@ interface SetLoadingAction {
 interface SignOutAction {
   type: typeof SIGN_OUT;
 }
-
+interface SetAuth {
+  type: typeof SET_AUTH;
+}
 interface SetErrorAction {
   type: typeof SET_ERROR;
   payload: string;
@@ -54,4 +56,5 @@ export type AuthAction =
   | SetUserAction
   | SetLoadingAction
   | SignOutAction
-  | SetErrorAction;
+  | SetErrorAction
+  | SetAuth;
