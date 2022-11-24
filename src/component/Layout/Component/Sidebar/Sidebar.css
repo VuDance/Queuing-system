@@ -12,6 +12,9 @@
   bottom: 30px;
 }
 .btnLogOut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 12px;
   gap: 12px;
   width: 176px;

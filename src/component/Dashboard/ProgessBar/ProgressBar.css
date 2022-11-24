@@ -1,0 +1,32 @@
+.progressBar {
+  position: relative;
+  margin-bottom: 12px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
+  border-radius: 12px;
+  height: 83px;
+  display: flex;
+  align-items: center;
+  padding: 11px 16px;
+  justify-content: space-between;
+}
+h6 {
+  font-size: xx-small !important;
+}
+.circle1Inside {
+  position: absolute;
+  left: 22px;
+  top: 18px;
+}
+.circle2Inside {
+  position: absolute;
+  left: 27px;
+  top: 22px;
+}
+.orange {
+  color: #ff7506;
+}
+.blue {
+  color: #4277ff;
+}

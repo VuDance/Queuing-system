@@ -32,9 +32,6 @@ export const db = getFirestore();
 
 export const upload = async (file: any, currentUser: any, setLoading: any) => {
   try {
-    //Create user
-
-    //Create a unique image name
     const date = new Date().getTime();
     const storageRef = ref(storage, `${currentUser.uid + date}`);
 
@@ -56,6 +53,4 @@ export const upload = async (file: any, currentUser: any, setLoading: any) => {
       });
     });
   } catch (err) {}
-
-  alert("Uploaded file!");
 };

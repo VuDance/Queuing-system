@@ -27,7 +27,6 @@ const Home = () => {
   const getData = async () => {
     const querySnapshot = await getDocs(collection(db, "users"));
     querySnapshot.forEach((doc) => {
-      console.log(doc.data());
       setUser(doc.data());
       setPhotoURL(doc.data().photoURL);
     });

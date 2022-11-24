@@ -1,0 +1,115 @@
+.Calendars {
+  font-family: "Nunito";
+  text-align: left;
+}
+
+.react-calendar {
+  padding: 5px 20px;
+  border-radius: 4px;
+  border: 1px solid #d7dae2;
+  box-shadow: 0px 2px 10px #0000000f;
+}
+
+.react-calendar abbr[title] {
+  text-decoration: none;
+}
+
+.react-calendar .react-calendar__tile--now {
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.react-calendar .react-calendar__month-view__weekdays__weekday {
+  color: #ff7506 !important;
+  padding: 0;
+}
+
+.react-calendar .react-calendar__month-view__days__day--neighboringMonth {
+  color: #757575 !important;
+}
+
+.react-calendar .react-calendar__month-view__days__day--weekend {
+  color: inherit;
+}
+
+.react-calendar .react-calendar__navigation__label {
+  background-color: #fff !important;
+  cursor: default !important;
+  color: #ff7506 !important;
+}
+.css-cw8t7i {
+  color: #ff7506 !important;
+}
+.react-calendar .react-calendar__navigation__arrow {
+  background-color: #fff !important;
+  color: #ff7506 !important;
+}
+
+.react-calendar .react-calendar__tile {
+  padding: 0.25rem 0.5rem;
+}
+
+.react-calendar .react-calendar__tile--hover {
+  background-color: #eaf3ff !important;
+}
+
+.react-calendar .react-calendar__tile--range {
+  background-color: #eaf3ff !important;
+}
+
+.react-calendar .react-calendar__tile--range > abbr {
+  background-color: #eaf3ff;
+  color: #fff;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  font-size: 0.8rem;
+}
+
+.react-calendar .react-calendar__tile > abbr {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: none;
+  font-size: 0.8rem;
+}
+
+.react-calendar .react-calendar__tile:hover {
+  background-color: transparent !important;
+}
+
+.react-calendar .react-calendar__tile:hover > abbr {
+  background-color: #ff7506 !important;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-calendar .react-calendar__tile--active {
+  background-color: transparent !important;
+}
+
+.react-calendar .react-calendar__tile--active > abbr {
+  background-color: #ff7506 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.react-calendar .react-calendar__tile--hasActive {
+  background-color: transparent !important;
+}
+
+.react-calendar .react-calendar__tile--hasActive > abbr {
+  width: 30px;
+  height: 30px;
+  padding-top: 0.4rem;
+  border-radius: 100%;
+  background-color: #318bf7;
+  color: #fff;
+  font-size: 0.8rem;
+}

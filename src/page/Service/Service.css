@@ -1,0 +1,67 @@
+.addForm {
+  background: #ffffff;
+  box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+  border-radius: 16px;
+  width: 1000px;
+  height: 430px;
+  padding: 16px 24px;
+}
+input,
+textarea {
+  width: 100%;
+}
+.inputAddServiceForm input {
+  height: 32px;
+  background: #ffffff;
+  border: 1.5px solid #d4d4d7;
+  border-radius: 8px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+textarea:focus {
+  outline: none;
+}
+textarea {
+  resize: none;
+  height: 108px;
+  border: 1.5px solid #d4d4d7;
+  border-radius: 8px;
+  padding: 0 10px;
+}
+.inputAddServiceForm button {
+  width: 50px;
+  padding: 4px 4px;
+  background: #ffffff;
+  border: 1.5px solid #d4d4d7;
+  border-radius: 8px;
+}
+.formInforService {
+  width: 1020px;
+  height: 480px;
+  margin-left: 24px;
+  display: flex;
+  gap: 20px;
+}
+.inforService1 {
+  height: 480px;
+  padding: 10px;
+  width: 330px;
+  background: #ffffff;
+  box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+  border-radius: 12px;
+}
+.inforService1 button {
+  width: 50px;
+  padding: 4px 4px;
+  background: #ffffff;
+  border: 1.5px solid #d4d4d7;
+  border-radius: 8px;
+}
+.inforService2 {
+  height: 480px;
+  width: 700px;
+  background: #ffffff;
+  box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+  border-radius: 12px;
+  padding: 10px;
+}

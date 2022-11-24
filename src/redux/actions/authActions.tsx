@@ -9,8 +9,146 @@ import {
   User,
 } from "../types";
 import { RootState } from "..";
-import firebase from "../../config/firebase";
+import firebase, { db } from "../../config/firebase";
+import {
+  addDoc,
+  arrayUnion,
+  collection,
+  doc,
+  getDocs,
+  setDoc,
+  updateDoc,
+} from "firebase/firestore";
 
+export const addDevice = ({
+  deviceId,
+  deviceType,
+  name,
+  nameUser,
+  IP,
+  password,
+  translation,
+  activity,
+  connect,
+}: any) => {
+  const devices = doc(db, "device", "IEe73dqC3WGlVjApndCZ");
+  return async (dispatch: any) => {
+    try {
+      await updateDoc(devices, {
+        data: arrayUnion({
+          deviceId,
+          deviceType,
+          name,
+          nameUser,
+          IP,
+          password,
+          translation,
+          activity,
+          connect,
+        }),
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+export const addAccounts = ({
+  name,
+  username,
+  phone,
+  password,
+  email,
+  rePassword,
+  job,
+  status,
+}: any) => {
+  const account = doc(db, "account", "CtS9sBYBAnNEeeLjcxkX");
+  return async (dispatch: any) => {
+    try {
+      await updateDoc(account, {
+        data: arrayUnion({
+          name,
+          username,
+          phone,
+          password,
+          email,
+          rePassword,
+          job,
+          status,
+        }),
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+
+export const addService = ({
+  serviceID,
+  name,
+  detail,
+  check1,
+  check2,
+  check3,
+  check4,
+  activity,
+}: any) => {
+  const devices = doc(db, "Service", "eYZ3lL6MrrSlvMmfYQdS");
+  return async (dispatch: any) => {
+    try {
+      await updateDoc(devices, {
+        data: arrayUnion({
+          serviceID,
+          name,
+          detail,
+          check1,
+          check2,
+          check3,
+          check4,
+          activity,
+        }),
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+export const addJob = ({
+  title,
+  detail,
+  check1,
+  check2,
+  check3,
+  check4,
+  check5,
+  check6,
+  check7,
+  check8,
+  user = "6",
+}: any) => {
+  const job = doc(db, "job", "50QeT8PHyFf2EFl9LaGC");
+  return async (dispatch: any) => {
+    try {
+      await updateDoc(job, {
+        data: arrayUnion({
+          title,
+          detail,
+          check1,
+          check2,
+          check3,
+          check4,
+          check5,
+          check6,
+          check7,
+          check8,
+          user,
+        }),
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
 // Set error
 export const setError = (
   msg: string

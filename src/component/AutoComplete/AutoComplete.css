@@ -1,0 +1,15 @@
+.MuiAutocomplete-listbox {
+  height: 150px !important;
+}
+.MuiInput-underline:after {
+  border-bottom: 2px solid #ff7506 !important;
+}
+.MuiChip-root {
+  color: #ffffff !important;
+  background: #ffac6a !important;
+  box-shadow: 0px 0px 6px #e7e9f2 !important;
+  border-radius: 9px !important;
+}
+.MuiChip-deleteIcon {
+  color: #ffffff !important;
+}

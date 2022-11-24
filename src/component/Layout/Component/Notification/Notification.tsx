@@ -140,7 +140,6 @@ const Notification = () => {
   const getData = async () => {
     const querySnapshot = await getDocs(collection(db, "users"));
     querySnapshot.forEach((doc) => {
-      console.log(doc.data());
       setUser(doc.data());
     });
   };
@@ -157,7 +156,7 @@ const Notification = () => {
         </a>
       </Dropdown>
       <div className="notification_user">
-        <Link to="/user">
+        <Link to="/">
           <img
             src={user.photoURL}
             style={{ marginRight: 5, marginLeft: 5 }}
